@@ -4,7 +4,7 @@ config {
 }
 
 SELECT
-  COUNT(DISTINCT fruits) AS distinct_fruits,
+  COUNT(DISTINCT fruits) AS distinct_fruit,
   SUM(qty) AS total_qty
 FROM
   ${ref("fruitstall_inventory")}
