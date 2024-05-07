@@ -1,0 +1,22 @@
+config {
+    type: "table",
+    name: "partner_inventory",
+    description: "Partner Fruitstall Inventory Table"
+}
+
+  -- The rest of a SQLX file contains your SELECT statement used to create the table.
+SELECT
+  "apples" AS fruits,
+  12 AS qty
+UNION ALL
+SELECT
+  "bananas" AS fruits,
+  76 AS qty
+UNION ALL
+SELECT
+  "pears" AS fruits,
+  45 AS qty
+UNION ALL
+SELECT
+  "strawberries" AS fruits,
+  2 AS qty

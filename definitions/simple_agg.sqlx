@@ -1,0 +1,13 @@
+config {
+    type: "table",
+    name: "fruit_types",
+    description: "Distinct Fruit types."
+}
+
+select count(distinct fruits) as distinct_fruits
+FROM
+(
+    SELECT fruits, qty FROM ${ref("fruitstall_inventory")}
+    UNION ALL
+    SELECT fruits, qty FROM ${ref("partner_inventory")}
+)

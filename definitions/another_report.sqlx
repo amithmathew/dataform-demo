@@ -1,0 +1,10 @@
+config {
+    type: "table",
+    description: "Another ggregate Inventory View"
+}
+
+SELECT
+  a.*,
+  b.*
+FROM
+  ${ref("total_inventory")} a, ${ref("fruit_types")} b
