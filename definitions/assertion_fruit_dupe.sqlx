@@ -1,0 +1,5 @@
+config { type: 'assertion'}
+SELECT fruits, count(*) rws FROM
+    ${ref("fruitstall_inventory")}
+GROUP BY fruits
+HAVING rws > 1

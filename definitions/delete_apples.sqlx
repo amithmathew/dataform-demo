@@ -1,0 +1,8 @@
+config {
+    type: "operations",
+    tags: ['no-apples-pears'],
+    dependencies: ["total_inventory"]
+}
+
+DELETE from dataform_demo.total_inventory WHERE fruits = "apples";
+DELETE from dataform_demo.total_inventory WHERE fruits = "pears";

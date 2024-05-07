@@ -1,0 +1,14 @@
+config {
+    type: "table",
+    name: "total_inventory",
+    description: "Total Fruitstall Inventory Table",
+}
+
+select fruits, sum(qty) as qty
+FROM
+(
+    SELECT fruits, qty FROM ${ref("fruitstall_inventory")}
+    UNION ALL
+    SELECT fruits, qty FROM ${ref("partner_inventory")}
+)
+GROUP BY fruits

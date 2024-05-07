@@ -1,0 +1,14 @@
+config {
+    type: "view",
+    name: "another_report",
+    description: "Distinct Fruit Types",
+}
+
+select fruits, sum(qty) as qty
+FROM
+(
+    SELECT fruits, qty FROM ${ref("fruitstall_inventory")}
+    UNION ALL
+    SELECT fruits, qty FROM ${ref("partner_inventory")}
+)
+GROUP BY fruits
