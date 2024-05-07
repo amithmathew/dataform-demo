@@ -1,0 +1,5 @@
+defaultProject: cr-demo-320112
+defaultLocation: US
+defaultDataset: dataform_demo
+defaultAssertionDataset: dataform_demo_assertions
+dataformCoreVersion: 3.0.0-beta.4

@@ -1,0 +1,10 @@
+config {
+    type: "view",
+    description: "Aggregate Inventory View"
+}
+
+SELECT
+  COUNT(DISTINCT fruits) AS distinct_fruits,
+  SUM(qty) AS total_qty
+FROM
+  ${ref("fruitstall_inventory")}
